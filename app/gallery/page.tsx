@@ -8,7 +8,7 @@ export default async function Home() {
   
   // get random news article type
   // source: googled
-  console.log(data);
+//   console.log(data);
   if (data !== null){
 
     const top_news = data["top_news"][Math.floor(Math.random() * data["top_news"].length)]["news"];

@@ -26,7 +26,7 @@ export default async function getData(useMock: boolean = false){
             return null;
         }
         const jsono = await response.json();
-        console.log(jsono);
+        // console.log(jsono);
         if (jsono['top_news'].length == 0){
             return null;
         }
