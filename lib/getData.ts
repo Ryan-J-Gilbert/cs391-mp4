@@ -1,4 +1,10 @@
 const API_KEY = process.env.API_KEY;
+let TOKEN = "";
+if (API_KEY === undefined){
+    TOKEN = "";
+} else  {
+    TOKEN = API_KEY;
+}
 // import { data } from "@/mock";
 
 export default async function getData(useMock: boolean = false){
@@ -7,13 +13,12 @@ export default async function getData(useMock: boolean = false){
     // if (useMock){
     //     return data;
     // }
+    const headers = { 'x-api-key': TOKEN };
 
     try {
         const response = await fetch("https://api.worldnewsapi.com/top-news?source-country=us&language=en", {
                 method: 'GET', 
-                headers: {
-                    'x-api-key': API_KEY
-                }
+                headers: headers
             }
         );
         

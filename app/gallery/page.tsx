@@ -1,4 +1,5 @@
 import getData from "@/lib/getData";
+import { PostProps } from "@/types";
 
 import NewsPost from "@/components/NewsPost";
 
@@ -33,7 +34,7 @@ export default async function Home() {
         <div className="flex flex-col items-center flex-grow w-6/7">
             <div className="grid grid-cols-4 gap-6 w-full">
 
-                {top_news.map(p => (
+                {top_news.map((p: PostProps) => (
                     <NewsPost key={p.id} post={p}/>
                 ))}
             </div>
