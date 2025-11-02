@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/Nav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,23 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="flex flex-col items-center min-h-screen">
+            <h1 className="text-4xl m-4">News Navigator</h1>
+            <Nav />
+            {children}
+            
+            <footer>
+                <p>Reload for a different topic!</p>
+                <br />
+                Sourced from:
+                <br />
+                <a href="https://worldnewsapi.com/">World News API</a>
+            </footer>
+        </div>
+
+
+        
+        
       </body>
     </html>
   );
