@@ -1,5 +1,5 @@
 import getData from "@/lib/getData";
-import PostProps from "@/types";
+import { PostProps } from "@/types";
 
 import {
   Carousel,
