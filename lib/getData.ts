@@ -1,5 +1,5 @@
 const API_KEY = process.env.API_KEY;
-import { data } from "@/mock";
+// import { data } from "@/mock";
 
 export default async function getData(useMock: boolean = false){
 
