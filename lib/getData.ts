@@ -4,9 +4,9 @@ const API_KEY = process.env.API_KEY;
 export default async function getData(useMock: boolean = false){
 
     
-    if (useMock){
-        return data;
-    }
+    // if (useMock){
+    //     return data;
+    // }
 
     try {
         const response = await fetch("https://api.worldnewsapi.com/top-news?source-country=us&language=en", {

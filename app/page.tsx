@@ -1,4 +1,5 @@
 import getData from "@/lib/getData";
+import PostProps from "@/types";
 
 import {
   Carousel,
@@ -22,7 +23,7 @@ export default async function Home() {
           <div className="flex flex-col items-center flex-grow">
             <Carousel className="w-full max-w-sm">
               <CarouselContent>
-                {top_news.map(p => (
+                {top_news.map((p: PostProps) => (
                   <CarouselItem key={p.id}>
                     <NewsPost key={p.id} post={p}/>
                   </CarouselItem>
